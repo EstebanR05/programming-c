@@ -65,6 +65,8 @@ int main()
     return 0;
 }
 
+//all method's
+
 int suma(int n1, int n2)
 {
     int result = n1 + n2;
