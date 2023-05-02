@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-// function's
 int suma(int, int);
 int resta(int, int);
 int multiplicacion(int, int);
@@ -8,24 +7,23 @@ float division(float, float);
 float potencia(float, float);
 int factorial(int);
 
-// main
 int main()
 {
-    int a, b, op;
-    printf("Ingresa un valor :");
-    scanf("%d", &a);
-    printf("Ingresa un valor :");
-    scanf("%d", &b);
+    int num1, num2, op;
+    printf("Digite su primer numero: ");
+    scanf("%d", &num1);
+    printf("Digite su segundo numero: ");
+    scanf("%d", &num2);
 
     do
     {
-        printf("\n*******Menu*******\n");
-        printf("[1] sumar \n");
-        printf("[2] restar \n");
-        printf("[3] multiplicacion \n");
-        printf("[4] division \n");
-        printf("[5] potencia \n");
-        printf("[6] factorial \n");
+        printf("\n******Menu******\n");
+        printf("[1] Suma \n");
+        printf("[2] Resta \n");
+        printf("[3] Multiplicación \n");
+        printf("[4] División \n");
+        printf("[5] Potencia \n");
+        printf("[6] Factorial \n");
         printf("[7] Salir del menu \n");
 
         printf("Digite una opcion: ");
@@ -34,18 +32,18 @@ int main()
         switch (op)
         {
         case 1:
-            printf("su Suma es: %d", suma(a, b));
+            printf("su Suma es: %d", suma(num1, num2));
             break;
         case 2:
-            printf("su Resta es: %d", resta(a, b));
+            printf("su Resta es: %d", resta(num1, num2));
             break;
         case 3:
-            printf("su Multiplicacion es: %d", multiplicacion(a, b));
+            printf("su Multiplicacion es: %d", multiplicacion(num1, num2));
             break;
         case 4:
-            if (b != 0)
+            if (num2 != 0)
             {
-                printf("La division es: %.1f \n", division((float)a, (float)b));
+                printf("La division es: %.1f \n", division((float)num1, (float)num2));
             }
             else
             {
@@ -53,7 +51,7 @@ int main()
             }
             break;
         case 5:
-            printf("Su potencia es:  %2.f\n", potencia((float)a, (float)b));
+            printf("Su potencia es:  %2.f\n", potencia((float)num1, (float)num2));
             break;
         case 6:
             printf("A que numero desea sacar el factorial: \n");
@@ -72,10 +70,10 @@ int main()
                 switch (op)
                 {
                 case 1:
-                    printf("Su factorial es: %d\n", factorial((int)a));
+                    printf("Su factorial es: %d\n", factorial((int)num1));
                     break;
                 case 2:
-                    printf("Su factorial es: %d\n", factorial((int)b));
+                    printf("Su factorial es: %d\n", factorial((int)num2));
                     break;
                 }
             }
@@ -87,7 +85,6 @@ int main()
     return 0;
 }
 
-// all methods
 int suma(int n1, int n2)
 {
     int result = n1 + n2;
@@ -114,7 +111,6 @@ float division(float n1, float n2)
 
 float potencia(float n1, float n2)
 {
-    printf("\n potencia con while\n");
 
     int n = n2;
     double p = 1;
@@ -138,6 +134,7 @@ float potencia(float n1, float n2)
 
 int factorial(int n1)
 {
+
     int i;
     int f = 1;
     printf("%d! = ", n1);
