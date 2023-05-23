@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void main()
+int main()
 {
     int result2 = 0;
     int edades[10];
@@ -18,4 +18,5 @@ void main()
     promedio2 = result2 / 10;
 
     printf("\n su promedio 2 es: %f \n", promedio2);
+	return 0;
 }
